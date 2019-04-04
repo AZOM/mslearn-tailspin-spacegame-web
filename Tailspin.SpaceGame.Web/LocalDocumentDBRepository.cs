@@ -25,6 +25,12 @@ namespace TailSpin.SpaceGame.Web
             _items = JsonConvert.DeserializeObject<List<T>>(new StreamReader(stream).ReadToEnd());
         }
 
+        public LocalDocumentDBRepository(Stream stream)
+        {
+            // Serialize the items from the provided JSON document.
+            _items = JsonConvert.DeserializeObject<List<T>>(new StreamReader(stream).ReadToEnd());
+        }
+
         /// <summary>
         /// Retrieves the item from the store with the given identifier.
         /// </summary>
