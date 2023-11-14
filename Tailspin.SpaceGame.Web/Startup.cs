@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TailSpin.SpaceGame.Web.Models;
-using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 
 namespace TailSpin.SpaceGame.Web
 {
@@ -31,7 +24,6 @@ namespace TailSpin.SpaceGame.Web
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
             // Add document stores. These are passed to the HomeController constructor.
